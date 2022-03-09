@@ -4,7 +4,8 @@ class MyNewComponent extends Component {
    render() {
       return(
          <div>
-            {this.props.someText}
+            <h1>{this.props.header}</h1>
+            {this.props.children}
          </div>
       );
    }
