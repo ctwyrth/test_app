@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import styles from './PersonCard.module.css'
 
-class PersonCard extends Component {
+export default class PersonCard extends Component {
    constructor(props) {
       super(props);
       this.state = {
@@ -21,10 +22,8 @@ class PersonCard extends Component {
             <h2>{ this.state.lastName }, { this.state.firstName }</h2>
             <p>Age: { this.state.age }</p>
             <p>Hair Color: { this.state.hairColor }</p>
-            <button onClick={ this.increaseAge }>Birthday Button for { this.state.firstName } { this.state.lastName }</button>
+            <button className={ styles.btnStyle } onClick={ this.increaseAge }>Birthday Button for { this.state.firstName } { this.state.lastName }</button>
          </div>
       )
    }
 }
-
-export default PersonCard;
